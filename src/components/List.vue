@@ -88,16 +88,15 @@ export default {
             newIngredientName: '',
             newIngredientQuantity: 0,
             newIngredientPrice: 0,
-            recipes: [
-                {
-                    name: 'Pizza',
-                    ingredients: [
-                        { name: 'Flour', quantity: 2, price: 1.5, bought: false },
-                        { name: 'Water', quantity: 1, price: 1.5, bought: false },
-                        { name: 'Yeast', quantity: 1, price: 1.5, bought: false },
-                    ],
-                },
-            ]
+            recipes: JSON.parse(localStorage.getItem('mktlist-recipes') || '[]')
+        }
+    },
+    watch: {
+        recipes: {
+            deep: true,
+            handler(val) {
+                localStorage.setItem('mktlist-recipes', JSON.stringify(val));
+            }
         }
     },
     methods: {
