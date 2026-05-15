@@ -1,5 +1,33 @@
-# Vue 3 + Vite
+# MKTList
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A shopping list app built with Vue 3 and Bootstrap 5. Organize your groceries by recipe — add recipes, manage ingredients with quantities and prices, and track what you've already bought.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Features
+
+- Add and remove recipes
+- Add and remove ingredients per recipe (name, quantity, price)
+- Mark ingredients as bought
+- Automatic total cost calculation per ingredient
+- Data persisted in `localStorage` — survives page refresh
+
+## Tech Stack
+
+- [Vue 3](https://vuejs.org/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Vite](https://vitejs.dev/)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
